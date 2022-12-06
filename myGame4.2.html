@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>My Game - Fight!</title>
+    <link rel="stylesheet" href="game4.2.css">
+    <script src="game4.2.js"></script>
+</head>
+<body>
+    <div id="contain">
+        <div id="player-character-selected"></div>
+        <div id="opponent-character-selected"></div>
+        <div id="startGame"></div>
+        <button id="startGameClick" onclick="startMyGame()">Start Game</button>
+        <div id="outer-background-menu">
+            <div id="inner-background-menu"></div>
+        </div>
+        <div id="outer-dialogue-box">
+            <div id="inner-dialogue-box">
+                <div id="dialogue"><!-- What will<br>Aveon do? --></div>
+            </div>
+        </div>
+        <div id="continue-button1" onclick="event1()" class="continue-button">Continue</div>
+        <div id="continue-button2" onclick="playerCharacterChoice()" class="continue-button">Continue</div>
+        <div id="continue-button3" onclick="pidgeyAttackRandomization()" class="continue-button">Continue</div>
+        <div id="continue-button4" onclick="playerFainted()" class="continue-button">Continue</div>
+        <div id="continue-button5" onclick="lose()" class="continue-button">Continue</div>
+        <div id="continue-button6" onclick="opponentFainted()" class="continue-button">Continue</div>
+        <div id="continue-button7" onclick="won()" class="continue-button">Continue</div>
+        <div id="continue-button8" onclick="playerXPGenerator()" class="continue-button">Continue</div>
+        <div id="continue-button9" onclick="playerLevelGrowth()" class="continue-button">Continue</div>
+        <div id="outer-select-box">
+            <div id="middle-select-box">
+                <div id="inner-select-box">
+                    <button id="select-attack" onclick="displayAttackSelection()" onmouseover="displayHover1_1()" onmouseout="noDisplayHover1_1()">FIGHT</button>
+                    <button id="select-bag" onclick="displayBagSelection()" onmouseover="displayHover1_2()" onmouseout="noDisplayHover1_2()">BAG</button>
+                    <button id="select-character" onclick="displayCharacterSelection()" onmouseover="displayHover1_3()" onmouseout="noDisplayHover1_3()">POKéMON</button>
+                    <button id="select-run" onclick="" onmouseover="displayHover1_4()" onmouseout="noDisplayHover1_4()">RUN</button>
+                    <img src="/Version 4/Images/select-hover.png" id="select-attack-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-bag-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-character-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-run-hover">
+                </div>
+                <div id="attack-options">
+                    <button id="atkOpt1" onclick="attackMoveScratch()" onmouseover="displayAtkSelectionHover1()" onmouseout="nonDisplayAtkSelectionHover1()">Scratch</button>
+                    <button id="atkOpt2" onmouseover="displayAtkSelectionHover2()" onmouseout="nonDisplayAtkSelectionHover2()">-</button>
+                    <button id="atkOpt3" onmouseover="displayAtkSelectionHover3()" onmouseout="nonDisplayAtkSelectionHover3()">-</button>
+                    <button id="atkOpt4" onmouseover="displayAtkSelectionHover4()" onmouseout="nonDisplayAtkSelectionHover4()">-</button>
+                    <button id="atkOptExit" onclick="exitAtkSection()">Exit</button>
+                    <img src="/Version 4/Images/select-hover.png" id="select-atkOpp1-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-atkOpp2-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-atkOpp3-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-atkOpp4-hover">
+                </div> 
+                <div id="bag-options">
+                    <button id="bagOpt1" onmouseover="displayBagSelectionHover1()" onmouseout="nonDisplayBagSelectionHover1()">-</button>
+                    <button id="bagOpt2" onmouseover="displayBagSelectionHover2()" onmouseout="nonDisplayBagSelectionHover2()">-</button>
+                    <button id="bagOpt3" onmouseover="displayBagSelectionHover3()" onmouseout="nonDisplayBagSelectionHover3()">-</button>
+                    <button id="bagOpt4" onmouseover="displayBagSelectionHover4()" onmouseout="nonDisplayBagSelectionHover4()">-</button>
+                    <button id="bagOptExit" onclick="exitBagSection()">Exit</button>
+                    <img src="/Version 4/Images/select-hover.png" id="select-bagOpp1-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-bagOpp2-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-bagOpp3-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-bagOpp4-hover">
+                </div>
+                <div id="character-options">
+                    <button id="characterOpt1" onmouseover="displayCharacterSelectionHover1()" onmouseout="nonDisplayCharacterSelectionHover1()">-</button>
+                    <button id="characterOpt2" onmouseover="displayCharacterSelectionHover2()" onmouseout="nonDisplayCharacterSelectionHover2()">-</button>
+                    <button id="characterOpt3" onmouseover="displayCharacterSelectionHover3()" onmouseout="nonDisplayCharacterSelectionHover3()">-</button>
+                    <button id="characterOpt4" onmouseover="displayCharacterSelectionHover4()" onmouseout="nonDisplayCharacterSelectionHover4()">-</button>
+                    <button id="characterOptExit" onclick="exitCharacterSection()">Exit</button>
+                    <img src="/Version 4/Images/select-hover.png" id="select-characterOpp1-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-characterOpp2-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-characterOpp3-hover">
+                    <img src="/Version 4/Images/select-hover.png" id="select-characterOpp4-hover">
+                </div>
+            </div>
+        </div>
+        <div id="player-progressbar-outer-one"></div>
+        <div id="player-progressbar-outer-two"></div>
+        <div id="player-progressbar-outer-three">
+            <div id="player-name"></div>
+            <div id="player-level"></div>
+            <div id="player-healthbar-outer-one-hp">HP</div>
+            <div id="player-healthbar-outer-one">
+                <div id="player-healthbar-outer-two">
+                    <div id="player-healthbar-inner"></div>
+                </div>
+                <div id="player-health-count"></div>
+            </div>
+        </div>
+        <div id="opponent-progressbar-outer-one"></div>
+        <div id="opponent-progressbar-outer-two"></div>
+        <div id="opponent-progressbar-outer-three">
+            <div id="opponent-name"></div>
+            <div id="opponent-level"></div>
+            <div id="opponent-healthbar-outer-one-hp">HP</div>
+            <div id="opponent-healthbar-outer-one">
+                <div id="opponent-healthbar-outer-two">
+                    <div id="opponent-healthbar-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
