@@ -10,7 +10,7 @@ This is a Pokémon Game I recreated using html, css & js.
 
 ## Author
 
-* Daniel Chiquete - dchiqu998@west-mec.org
+* Daniel Chiquete - dchiquete2019@gmail.com
 
 ## Version History 
 
