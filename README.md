@@ -14,7 +14,7 @@ This is a Pokémon Game I recreated using html, css & js.
 
 ## Version History 
 
-* 0.1
+* 1.0
     * Initial Release
 
 ## License
