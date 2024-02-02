@@ -24,4 +24,4 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [Pokémon]
+* [Pokémon](https://www.pokemon.com/)
